@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Transiciones</title>
+    <style>
+      .pelota{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: red;
+/*         transition-property: width, height, border-radius;
+        transition-duration: 1s;
+        transition-delay: 1s;
+        transition-timing-function: ease; 
+        Nota: se puede declarar lo mismo con una sola línea de código de fomra resumida como se ve a continuación*/
+        transition: width, height 1s, 1s ease;
+      }
+      .pelota:hover{
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pelota b"></div>
+  </body>
+</html>

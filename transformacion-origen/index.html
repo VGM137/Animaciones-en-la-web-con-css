@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transformación punto de origen</title>
+  <style>
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      font-family: arial
+    }
+    .container{
+      border: 1px solid red;
+    }
+    .container:hover .cuadrado{
+      /* transform-origin: x y | top bottom left right; */
+      /* transform-origin: 50% 50%; 
+      transform: rotateX(Xdeg);
+      transform: rotateY(45deg);
+      transform: rotateZ(45deg);*/
+      transform-origin: 0% 0%;
+      transform: rotateZ(45deg);
+    }
+    .cuadrado{
+      width: 200px;
+      height: 200px;
+      background: #7dc900;
+      margin: 20px;
+      transition: .1s ease;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cuadrado">
+      <span>Hola mundo!</span> 
+    </div>
+  </div>
+  
+</body>
+</html>

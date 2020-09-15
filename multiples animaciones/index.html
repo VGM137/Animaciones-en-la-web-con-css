@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiples animaciones</title>
+  <style>
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      font-family: arial;
+      overflow: hidden;
+    }
+    .container{
+      border: 1px solid red;
+      width: 100%;
+      height: 240px;
+    }
+    .container:hover .cuadrado{
+/*       animation-play-state: paused;
+      opacity: 1;
+      animation-fill-mode: initial; */
+    }
+    .cuadrado{
+      width: 200px;
+      height: 200px;
+      background: #7dc900;
+      margin: 20px;
+      border-radius: 50%;
+/*       transition: .1s ease; */
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      animation-name: cuadrado, rebote;
+      animation-duration: 5s, 300ms;
+      animation-delay: 1s;
+      /* animation-iteration-count: 2; */
+      animation-iteration-count: infinite;
+/*       animation-timing-function: ease; */
+/*       animation-timing-function: ease-in; */
+/*       animation-timing-function: ease-in-out; */
+/*       animation-timing-function: ease-out; */
+      animation-timing-function: linear, ease-in-out;
+/*       animation-timing-function: steps(10); */
+/*       animation-timing-function: cubic-bezier(.89,-0.43,.87,.55);
+ */      /* Nota: ver cubic-bezier.com */
+/*       animation-direction: reverse; */
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      /* animation-play-state: paused; */
+      position: relative;
+    }
+    @keyframes cuadrado{
+      0%{
+        opacity: 1;
+        left: 0;
+      }
+      100%{
+        opacity: 1;
+        left: calc(100% - 240px);
+      }
+    }
+    @keyframes escalera{
+      from{
+      transform: translate(0) 
+      }
+    }
+    @keyframes rebote{
+      from{
+        transform: translateY(0);
+      }
+      to{
+        transform: translateY(100px) scale(1, .8);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cuadrado">
+      <span>Hola mundo!</span> 
+    </div>
+  </div>
+  
+</body>
+</html>
